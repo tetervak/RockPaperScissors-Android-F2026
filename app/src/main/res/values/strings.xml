@@ -1,3 +1,28 @@
 <resources>
-    <string name="app_name">RockPaperScissors</string>
+    <string name="app_name">Rock Paper Scissors</string>
+
+    <string name="make_your_choice">Make your choice</string>
+    <string name="game_result">Game Result</string>
+
+    <string name="paper">Paper</string>
+    <string name="rock">Rock</string>
+    <string name="scissors">Scissors</string>
+
+    <string name="play">Play</string>
+    <string name="replay">Replay</string>
+
+    <string name="you_win">You are the winner!</string>
+    <string name="computer_wins">Computer wins</string>
+    <string name="play_again">Play again</string>
+
+    <string name="computer">Computer</string>
+    <string name="you">You</string>
+    <string name="unknown">Unknown</string>
+    <string name="unknown_result">Unknown result</string>
+
+    <string name="about">About</string>
+    <string name="about_game">About Game</string>
+    <string name="programming_example">This is a programming example from an Android application development course.</string>
+    <string name="ok">OK</string>
+    <string name="play_the_game">Play the Game</string>
 </resources>
