@@ -27,16 +27,9 @@ class GameViewModel : ViewModel() {
                     gameResult = gameService.getGameResult(
                         userChoice = state.userChoice,
                         computerChoice = computerChoice
-                    ),
-                    destination = Destination.RESULT
+                    )
                 )
             }
-        }
-    }
-
-    fun onReplay() {
-        _gameUiState.update { state ->
-            state.copy(destination = Destination.PLAY)
         }
     }
 
