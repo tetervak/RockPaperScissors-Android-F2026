@@ -10,6 +10,14 @@ import androidx.navigation.compose.rememberNavController
 import ca.tetervak.rockpaperscissors.ui.common.AboutDialog
 import ca.tetervak.rockpaperscissors.ui.play.PlayScreen
 import ca.tetervak.rockpaperscissors.ui.result.ResultScreen
+import kotlinx.serialization.Serializable
+
+
+@Serializable
+object Play
+
+@Serializable
+object Result
 
 @Composable
 fun AppRootScreen(viewModel: GameViewModel = viewModel()) {
@@ -19,20 +27,20 @@ fun AppRootScreen(viewModel: GameViewModel = viewModel()) {
     val navController = rememberNavController()
     NavHost(
         navController = navController,
-        startDestination = "play"
+        startDestination = Play
     ){
-        composable(route = "play") {
+        composable<Play>{
             PlayScreen(
                 userChoice = uiState.userChoice,
                 onUserChoiceChange = viewModel::onUserChoiceChange,
                 onPlay = {
                     viewModel.onPlay()
-                    navController.navigate(route = "result")
+                    navController.navigate(route = Result)
                 },
                 onHelpButtonClick = viewModel::onOpenHelp
             )
         }
-        composable(route = "result") {
+        composable<Result> {
             ResultScreen(
                 userChoice = uiState.userChoice,
                 computerChoice = uiState.computerChoice,
