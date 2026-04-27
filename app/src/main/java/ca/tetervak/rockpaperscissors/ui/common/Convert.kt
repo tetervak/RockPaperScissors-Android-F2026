@@ -1,4 +1,4 @@
-package ca.tetervak.rockpaperscissors.ui.theme.common
+package ca.tetervak.rockpaperscissors.ui.common
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.size
